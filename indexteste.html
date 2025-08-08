@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Projeto Redes Sociais</title>
+    <style>
+        body {
+            background-image: url(imagens/fundo-madeira.jpg);
+            position: relative;
+        }
+
+        div#cell {
+            position: relative;
+        }
+
+        img {
+            position: absolute;
+            top: 500px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        #botao1 {
+            background-image: url(imagens/logo-github.jpg);
+            width: 80px;
+            height: 80px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: absolute;
+            left: 850px;
+            border-radius: 40px;
+            top: 100px;
+        }
+
+        #botao2 {
+            background-image: url(imagens/logo-youtube.jpg);
+            width: 80px;
+            height: 80px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: absolute;
+            left: 850px;
+            border-radius: 40px;
+            top:200px;
+        }
+
+        #botao3 {
+            background-image: url(imagens/logo-home.jpg);
+            width: 80px;
+            height: 80px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: absolute;
+            left: 850px;
+            border-radius: 40px;
+        }
+        
+        #home {
+            position: absolute;
+            width: 267px;
+            height: 473px;
+            top:  267px;
+            left: 338px;
+        }
+
+        #celular {
+            position: relative;
+        }
+
+        .bt {
+            transition: transform 0.2s ease;
+        }
+
+        .bt:hover {
+            transform: scale(1.1);
+        }
+
+    </style>
+</head>
+<body>
+    <div id="cell">
+        <img src="imagens/frame-iphone.png" alt="imagem-iphone">
+    </div>
+    <div class= "bt" id="botao1" onclick="github()">
+        
+    </div>
+
+    <div class="bt" id="botao2" onclick="youtube()">
+    </div>
+    
+    <div  id="celular">
+        <iframe id="home" src="imagens/tela-home.jpg" frameborder="0"></iframe>
+    </div>
+
+    <div class="bt" id="botao3" onclick="home()"></div>
+    
+    <script>
+        function github (){
+            var git = document.querySelector('iframe#home')
+            git.setAttribute('src', 'imagens/tela-github.jpg')
+        }
+        
+        function home (){
+            var git = document.querySelector('iframe#home')
+            git.setAttribute('src', 'imagens/tela-home.jpg')
+        }
+
+        function youtube (){
+            var git = document.querySelector('iframe#home')
+            git.setAttribute('src', 'imagens/tela-youtube.png')
+        }
+    </script>
+</body>
+</html>
